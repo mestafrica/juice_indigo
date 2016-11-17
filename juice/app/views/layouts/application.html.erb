@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Juice</title>
-    <%= csrf_meta_tags %>
+   
+   <head>
+      <title>Juice</title>
+      <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= csrf_meta_tags %>
+   </head>
+   
+   <body>
+      <div class = "container" style = "padding-top:20px;">
+         <%= yield %>
+      </div>
+   </body>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-  </head>
-
-  <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
 </html>
